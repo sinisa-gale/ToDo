@@ -1,0 +1,11 @@
+version: "3"
+services: 
+    react-app:
+        image: todo-image
+        ports: 
+            - "3000:3000"
+        volumes: 
+            - ./src:/app/src:ro
+        env_file: 
+            - ./.env
+        #container_name: todo-app-serv
