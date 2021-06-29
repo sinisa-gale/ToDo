@@ -1,21 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Content from './components/Content/Content';
 
 function App() {
-  return (<div className="App">
-    <header className="App-header">
-      <img src={logo}
-        className="App-logo"
-        alt="logo" />
-      <p>Edit <code> src / App.js </code> and closedockerssss </p>
-      <pre>Heloo everyonedocker </pre>
-      <a className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer" >
-            Learn React </a> 
-      </header> 
-      </div>);
+  return (
+    <div className="notificationsFrame">
+      <div className="panel">
+        
+        <Header />
+        <Content />
+        Strana 25 knjige 30 dana react
+      </div>
+    </div>
+      );
 }
 
 export default App;
