@@ -1,6 +1,13 @@
 import './header.css';
+import { useState } from 'react';
 
 const Header = ({title}) => {
+    const [searchVisible, setSearchVisible] = useState(false);
+    
+    const showSearch = () => {
+        setSearchVisible(!searchVisible);
+    }
+    
     return (
         <div className="header">
             <div className="fa fa-more"></div>

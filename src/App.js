@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
+import Clock from './components/Clock/Clock';
 
 function App() {
   const activities = [
@@ -29,13 +30,13 @@ function App() {
   return (
     <div className="notificationsFrame">
       <div className="panel">
-
+        <Clock />
         <Header title='Timeline' />
         <Content activities={activities} />
         <Header title='Profile' />
         <Header title='Settings' />
         <Header title='Chat' />
-        Strana 42 knjige 30 dana react
+        Strana 50 knjige 30 dana react
       </div>
     </div>
   );
