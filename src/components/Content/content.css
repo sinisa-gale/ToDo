@@ -1,0 +1,22 @@
+.line {
+    border-bottom: 5px solid lightgray;
+}
+
+.item {
+    background-color: beige;
+}
+
+.avatar {
+    display: inline;
+    padding: 20px;
+    height: 56px;
+    float: left;
+}
+
+.avatar img {
+    width: 60px;
+}
+
+.time {
+    clear: both;
+}

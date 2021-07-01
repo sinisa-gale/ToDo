@@ -1,10 +1,10 @@
 import './header.css';
 
-const Header = () => {
+const Header = ({title}) => {
     return (
         <div className="header">
             <div className="fa fa-more"></div>
-            <span className="title">Timeline</span>
+            <span className="title">{title}</span>
             <input 
                 type="text"
                 className="searchInput"

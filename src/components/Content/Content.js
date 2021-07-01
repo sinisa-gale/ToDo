@@ -1,19 +1,24 @@
 import './content.css';
+import ActivityItem from '../ActivityItem/ActivityItem';
 
-const Content = () => {
+const Content = ({activities}) => {
     return(
         <div className="content">
             <div className="line"></div>
             {/* Timeline item */ }
-            <div className="item">
-                <div className="avatar">
-                    <img src="http://www.croop.cl/UI/twitter/images/doug.jpg"/>
-                    Doug
-                </div>
-                <span className="time">An hour ago</span>
-                <p>Ate lunch</p>
-                <div className="commentCount">2</div>
-            </div>
+            {activities.map( activity => {
+                return (
+                    // <div className="item">
+                    // <div className="avatar">
+                    //     <img src={activity.user.avatar}/>
+                    //     <p>{activity.user.name}</p>
+                    // </div>
+                    // <span className="time">{activity.timestamp}</span>
+                    // <p>{activity.text}</p>
+                    // <div className="commentCount">{activity.comments.length}</div>
+                    // </div>
+                    <ActivityItem activity={activity} />
+            )})}
         </div>
 
     )
