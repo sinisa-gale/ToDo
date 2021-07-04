@@ -34,9 +34,9 @@ function App() {
         <Header title='Timeline' />
         <Content activities={activities} />
         <Header title='Profile' />
-        <Header title='Settings' />
+        <Header />
         <Header title='Chat' />
-        Strana 50 knjige 30 dana react
+        Strana 138 knjige 30 dana react
       </div>
     </div>
   );
