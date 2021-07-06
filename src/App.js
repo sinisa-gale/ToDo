@@ -2,10 +2,37 @@ import './App.css';
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 import Clock from './components/Clock/Clock';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { IndexRoute } from 'react-router';
 
 const Home = () => (<div><h1>Welcome home</h1></div>)
-const Homes = () => (<div><h1>Youre homes</h1></div>)
+const About = () => (<div><h1>About page</h1></div>)
+
+
+const Navbar = () => {
+  return (
+    <div className="navbar">
+      <Link className="link" to="/home" activeClassName="active">
+        Home
+      </Link>
+      <Link className="link" to="/about" activeClassName="active">
+        About
+      </Link>
+    </div >
+  )
+}
+
+const IndexPage = props => {
+  return (
+    <div className="app-container">
+      <h2>Container goes here</h2>
+      <Navbar/>
+      <div className="page-container">
+        {props.children}
+      </div>
+    </div>
+  )
+}
 
 function App() {
   const activities = [
@@ -31,10 +58,9 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/homes" component={Homes} />
-      </div>
+        <Navbar />
+        <Route path="/home" component={Home} />
+        <Route path="/about" component={About} />
     </Router>
     // <div className="notificationsFrame">
     //   <div className="panel">
@@ -44,7 +70,7 @@ function App() {
     //     <Header title='Profile' />
     //     <Header />
     //     <Header title='Chat' />
-    //     Strana 153 knjige 30 dana react
+    //     Strana 167 knjige 30 dana react
     //   </div>
     // </div>
   );
